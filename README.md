@@ -1,45 +1,35 @@
-# Sistema de Gestión de Pedidos
+# 📦 Sistema de Gestión de Pedidos
 
-Proyecto desarrollado bajo metodología **Scrum**, con planificación de sprints, diseño de UI y estructura de código orientada a la gestión de pedidos de un negocio.
-
----
-
-## Equipo
-
-| Nombre | Rol | Correo |
-|--------|-----|--------|
-| Helmer José Torres Correa | Product Owner / Scrum Master / Development | helmer.torres@unisimon.edu.co |
+Aplicación web para el control y seguimiento de pedidos de un negocio, desarrollada con metodología **Scrum** como parte de un proyecto académico en la Universidad Simón Bolívar.
 
 ---
 
-## Descripción
+## 👥 Equipo
 
-Aplicación web para que el encargado de un negocio pueda registrar, consultar y gestionar pedidos de clientes. Incluye control de estados, historial de clientes, resumen diario y exportación de datos.
-
----
-
-## Historias de Usuario
-
-### Sprint 1
-
-| ID | Tipo | Historia | Puntos | Prioridad |
-|----|------|----------|--------|-----------|
-| US-01 | Registro de pedido | Como encargado, quiero registrar un pedido con nombre del cliente, productos, cantidades y total. | 5 | Alta |
-| US-02 | Lista de pedidos activos | Como encargado, quiero ver todos los pedidos del día en una lista con sus estados. | 3 | Alta |
-| US-03 | Cambio de estado | Como encargado, quiero cambiar el estado de un pedido entre Pendiente, En proceso y Entregado. | 3 | Alta |
-
-### Sprint 2
-
-| ID | Tipo | Historia | Puntos | Prioridad |
-|----|------|----------|--------|-----------|
-| US-04 | Historial de cliente | Como encargado, quiero buscar un cliente y ver sus pedidos anteriores. | 5 | Media |
-| US-05 | Resumen del día | Como encargado, quiero ver un resumen con el número de pedidos atendidos y el total cobrado. | 3 | Media |
-| US-06 | Eliminar pedido | Como encargado, quiero eliminar un pedido registrado por error. | 2 | Baja |
-| US-07 | Exportar pedidos | Como encargado, quiero exportar los pedidos del día como archivo CSV. | 3 | Baja |
+| Nombre | Rol |
+|---|---|
+| Helmer Jose Torres Correa | Product Owner / Scrum Master / Development |
 
 ---
 
-## Estructura del Proyecto
+## 🚀 Funcionalidades
+
+### Sprint 1 (Implementadas)
+
+- **Registro de pedidos** — Ingreso de cliente, productos, cantidades y cálculo automático del total. El pedido se guarda con fecha y estado "Pendiente".
+- **Lista de pedidos activos** — Vista de todos los pedidos del día con su estado, ordenables por hora o estado.
+- **Cambio de estado** — Flujo de estados: `Pendiente → En proceso → Entregado`. No se puede revertir un pedido ya entregado.
+
+### Sprint 2 (Planificadas)
+
+- **Historial de cliente** — Búsqueda por nombre con historial de fechas y montos.
+- **Resumen del día** — Dashboard con cantidad de pedidos entregados y total vendido.
+- **Eliminar pedido** — Eliminación con confirmación; solo aplica a pedidos pendientes.
+- **Exportar a CSV** — Descarga del listado del día con cliente, productos, total y estado.
+
+---
+
+## 🏗️ Estructura del Proyecto
 
 ```
 /lib
@@ -64,29 +54,38 @@ Aplicación web para que el encargado de un negocio pueda registrar, consultar y
 
 ---
 
-## Funcionalidades Implementadas (Sprint 1)
+## 📋 Product Backlog
 
-- **Nuevo pedido:** selección de cliente, nota, productos disponibles con precio e IVA (16%), cálculo automático de subtotal y total, opción de guardar o cancelar.
-- **Lista de pedidos:** visualización con los 3 estados (Pendiente, En proceso, Entregado), filtros y barra de búsqueda.
-- **Cambio de estado:** el encargado puede actualizar el estado directamente desde la lista con un clic.
+| ID | Tipo | Historia de Usuario | Sprint | Puntos | Prioridad |
+|---|---|---|---|---|---|
+| US-01 | Registro de pedido | Como encargado, quiero registrar un pedido con cliente, productos, cantidades y total. | Sprint 1 | 5 | Alta |
+| US-02 | Lista de pedidos activos | Como encargado, quiero visualizar todos los pedidos activos. | Sprint 1 | 3 | Alta |
+| US-03 | Cambio de estado | Como encargado, quiero cambiar el estado de un pedido para controlar el flujo de atención. | Sprint 1 | 3 | Alta |
+| US-04 | Historial de cliente | Como encargado, quiero consultar el historial de pedidos de un cliente. | Sprint 2 | 5 | Media |
+| US-05 | Resumen del día | Como encargado, quiero ver un resumen diario de ventas. | Sprint 2 | 3 | Media |
+| US-06 | Eliminar pedido | Como encargado, quiero eliminar pedidos registrados por error. | Sprint 2 | 2 | Baja |
+| US-07 | Exportar pedidos | Como encargado, quiero exportar los pedidos del día a CSV. | Sprint 2 | 3 | Baja |
 
 ---
 
-## Herramientas Utilizadas
+## 🛠️ Herramientas utilizadas
 
 | Herramienta | Uso |
-|-------------|-----|
-| **V0** | Generación de estructura de código y componentes de UI |
-| **OpenCode** | Apoyo en el desarrollo del Sprint 1 |
-| **Google Stitch** | Creación del wireframe de la UI |
-| **ChatGPT** | Sugerencia de criterios de aceptación |
-| **Claude** | Generación del resumen del sprint |
+|---|---|
+| **V0** | Generación de código y estructura de componentes |
+| **OpenCode** | Desarrollo asistido de funcionalidades |
+| **Google Stitch** | Diseño del wireframe de la UI |
+| **ChatGPT** | Sugerencia de criterios de aceptación y refinamiento del backlog |
+| **Claude** | Resumen de sprint y generación del acta de reunión |
 
 ---
 
-## Notas
+## 📌 Estado del Proyecto
 
-- Los criterios de aceptación fueron sugeridos por ChatGPT como punto de partida para cada historia de usuario.
-- El resumen del sprint fue generado por Claude en base al backlog definido.
-- El wireframe presenta algunas inconsistencias visuales (estilos de botones) comunes al usar IA generativa; se prevén mejoras en iteraciones futuras.
-- La estructura de carpetas y los lenguajes definitivos se ajustarán conforme avance la implementación.
+El **Sprint 1** fue completado exitosamente, cumpliendo con las tres historias de usuario planificadas:
+
+- ✅ Registro de pedidos
+- ✅ Lista de pedidos activos con filtros y búsqueda
+- ✅ Cambio de estado de pedidos
+
+El **Sprint 2** está en planificación, con el objetivo de añadir historial de clientes, reportes diarios, eliminación y exportación de pedidos, además de mejoras visuales e iteraciones sobre las funcionalidades del Sprint 1.
