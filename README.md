@@ -1,10 +1,10 @@
-# 📦 Sistema de Gestión de Pedidos
+# Sistema de Gestión de Pedidos
 
-Aplicación web para el control y seguimiento de pedidos de un negocio, desarrollada con metodología **Scrum** como parte de un proyecto académico en la Universidad Simón Bolívar.
+Aplicación web para el control y seguimiento de pedidos de un negocio, desarrollada con metodología **Scrum** a lo largo de dos sprints.
 
 ---
 
-## 👥 Equipo
+## Equipo
 
 | Nombre | Rol |
 |---|---|
@@ -12,24 +12,29 @@ Aplicación web para el control y seguimiento de pedidos de un negocio, desarrol
 
 ---
 
-## 🚀 Funcionalidades
+## Descripción
 
-### Sprint 1 (Implementadas)
-
-- **Registro de pedidos** — Ingreso de cliente, productos, cantidades y cálculo automático del total. El pedido se guarda con fecha y estado "Pendiente".
-- **Lista de pedidos activos** — Vista de todos los pedidos del día con su estado, ordenables por hora o estado.
-- **Cambio de estado** — Flujo de estados: `Pendiente → En proceso → Entregado`. No se puede revertir un pedido ya entregado.
-
-### Sprint 2 (Planificadas)
-
-- **Historial de cliente** — Búsqueda por nombre con historial de fechas y montos.
-- **Resumen del día** — Dashboard con cantidad de pedidos entregados y total vendido.
-- **Eliminar pedido** — Eliminación con confirmación; solo aplica a pedidos pendientes.
-- **Exportar a CSV** — Descarga del listado del día con cliente, productos, total y estado.
+El sistema permite al encargado del negocio registrar pedidos, controlar su estado, consultar el historial de clientes y generar reportes diarios de ventas. La interfaz fue diseñada con wireframes en **Google Stitch** y el código desarrollado con apoyo de herramientas de IA como **V0**, **OpenCode** y **GitHub Copilot**.
 
 ---
 
-## 🏗️ Estructura del Proyecto
+## Funcionalidades
+
+### Sprint 1
+- **Registro de pedido** – Ingreso de cliente, productos, cantidades y total. El pedido se guarda con fecha y estado "Pendiente".
+- **Lista de pedidos activos** – Visualización de pedidos del día con estado, ordenables por hora o estado.
+- **Cambio de estado** – Flujo de estados: `Pendiente → En proceso → Entregado` (no reversible desde Entregado).
+
+### Sprint 2
+- **Historial de cliente** – Búsqueda por nombre con pedidos anteriores, fechas y montos.
+- **Resumen del día** – Total de pedidos entregados y monto vendido, actualizado automáticamente.
+- **Eliminar pedido** – Eliminación de pedidos pendientes con confirmación (no aplica a entregados).
+- **Exportar pedidos** – Generación de archivo CSV con cliente, productos, total y estado del día seleccionado.
+- **Perfil de cliente** – Tier/rango (Regular, VIP, Premium) y detalle de productos comprados con frecuencia.
+
+---
+
+## Estructura del proyecto
 
 ```
 /lib
@@ -54,38 +59,43 @@ Aplicación web para el control y seguimiento de pedidos de un negocio, desarrol
 
 ---
 
-## 📋 Product Backlog
+## Tecnologías utilizadas
 
-| ID | Tipo | Historia de Usuario | Sprint | Puntos | Prioridad |
-|---|---|---|---|---|---|
-| US-01 | Registro de pedido | Como encargado, quiero registrar un pedido con cliente, productos, cantidades y total. | Sprint 1 | 5 | Alta |
-| US-02 | Lista de pedidos activos | Como encargado, quiero visualizar todos los pedidos activos. | Sprint 1 | 3 | Alta |
-| US-03 | Cambio de estado | Como encargado, quiero cambiar el estado de un pedido para controlar el flujo de atención. | Sprint 1 | 3 | Alta |
-| US-04 | Historial de cliente | Como encargado, quiero consultar el historial de pedidos de un cliente. | Sprint 2 | 5 | Media |
-| US-05 | Resumen del día | Como encargado, quiero ver un resumen diario de ventas. | Sprint 2 | 3 | Media |
-| US-06 | Eliminar pedido | Como encargado, quiero eliminar pedidos registrados por error. | Sprint 2 | 2 | Baja |
-| US-07 | Exportar pedidos | Como encargado, quiero exportar los pedidos del día a CSV. | Sprint 2 | 3 | Baja |
+- **TypeScript** – Tipado estático del proyecto
+- **Next.js** (App Router) – Framework principal
+- **Tailwind CSS** – Estilos
+- **V0 / OpenCode / GitHub Copilot** – Asistencia en generación de código
+- **Google Stitch** – Diseño de wireframes
 
 ---
 
-## 🛠️ Herramientas utilizadas
+## Herramientas de IA utilizadas en el proceso
 
 | Herramienta | Uso |
 |---|---|
-| **V0** | Generación de código y estructura de componentes |
-| **OpenCode** | Desarrollo asistido de funcionalidades |
-| **Google Stitch** | Diseño del wireframe de la UI |
-| **ChatGPT** | Sugerencia de criterios de aceptación y refinamiento del backlog |
-| **Claude** | Resumen de sprint y generación del acta de reunión |
+| ChatGPT | Criterios de aceptación de historias de usuario y refinación del backlog |
+| Claude | Resumen del sprint y acta de reunión |
+| V0 | Estructura de carpetas, UI de pedidos y cambio de estado |
+| OpenCode | Código base del sprint 2 |
+| GitHub Copilot | Mejora y refactorización del código en VS Code |
+| Google Stitch | Wireframe de la interfaz |
 
 ---
 
-## 📌 Estado del Proyecto
+## Backlog de historias de usuario
 
-El **Sprint 1** fue completado exitosamente, cumpliendo con las tres historias de usuario planificadas:
+| ID | Historia | Sprint | Puntos | Prioridad |
+|---|---|---|---|---|
+| US-01 | Registro de pedido | Sprint 1 | 5 | Alta |
+| US-02 | Lista de pedidos activos | Sprint 1 | 3 | Alta |
+| US-03 | Cambio de estado | Sprint 1 | 3 | Alta |
+| US-04 | Historial de cliente | Sprint 2 | 5 | Media |
+| US-05 | Resumen del día | Sprint 2 | 3 | Media |
+| US-06 | Eliminar pedido | Sprint 2 | 2 | Baja |
+| US-07 | Exportar pedidos a CSV | Sprint 2 | 3 | Baja |
 
-- ✅ Registro de pedidos
-- ✅ Lista de pedidos activos con filtros y búsqueda
-- ✅ Cambio de estado de pedidos
+---
 
-El **Sprint 2** está en planificación, con el objetivo de añadir historial de clientes, reportes diarios, eliminación y exportación de pedidos, además de mejoras visuales e iteraciones sobre las funcionalidades del Sprint 1.
+## Estado del proyecto
+
+Sprint 1 completado exitosamente con las funcionalidades de registro, listado y cambio de estado de pedidos. Sprint 2 en curso con mejoras progresivas hasta alcanzar una versión completa.
